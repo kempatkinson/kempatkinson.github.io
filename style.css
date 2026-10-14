@@ -3,9 +3,9 @@ body{font:16px/1.65 "Helvetica Neue",Helvetica,Arial,sans-serif;color:#111;backg
 a{color:inherit}
 img{display:block;max-width:100%}
 
-.top{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:12px 32px;max-width:900px;margin:0 auto;padding:40px 24px 20px;border-bottom:1px solid #111}
-.name{font-weight:800;text-transform:uppercase;letter-spacing:-.01em;font-size:22px;text-decoration:none}
-.nav{display:flex;gap:24px;flex-wrap:wrap;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.top{display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px 40px;padding:40px 40px 24px;border-bottom:2px solid #111}
+.name{font-weight:800;text-transform:uppercase;letter-spacing:-.03em;line-height:.9;font-size:clamp(36px,6vw,80px);text-decoration:none}
+.nav{display:flex;gap:28px;flex-wrap:wrap;padding-bottom:6px;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
 .nav a{text-decoration:none;color:#999}
 .nav a:hover,.nav a.on{color:#111}
 
