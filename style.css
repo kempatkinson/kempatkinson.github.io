@@ -29,7 +29,8 @@ li{margin-bottom:8px}
 .project img{margin-bottom:12px;width:100%}
 
 /* projects: alternate left / right */
-.proj{width:62%}
+.wide{max-width:1280px;padding-left:40px;padding-right:40px}
+.proj{width:46%}
 .proj:nth-of-type(even){margin-left:auto;text-align:right}
 .proj h3{font-size:28px;font-weight:800;text-transform:uppercase;letter-spacing:-.01em;line-height:1.1;margin-bottom:16px}
 .proj img,.proj .reel{width:100%;margin-bottom:16px}
