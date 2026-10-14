@@ -28,7 +28,18 @@ li{margin-bottom:8px}
 .project{margin-bottom:40px}
 .project img{margin-bottom:12px;width:100%}
 
+/* projects: alternate left / right */
+.proj{width:62%}
+.proj:nth-of-type(even){margin-left:auto;text-align:right}
+.proj h3{font-size:28px;font-weight:800;text-transform:uppercase;letter-spacing:-.01em;line-height:1.1;margin-bottom:16px}
+.proj img,.proj .reel{width:100%;margin-bottom:16px}
+.proj p{margin-bottom:4px}
+hr{border:0;border-top:1px solid #111;margin:56px 0}
+
 @media (max-width:680px){
+  .proj,.proj:nth-of-type(even){width:100%;margin:0 auto;text-align:center}
+  .proj h3{font-size:22px}
+  hr{margin:40px 0}
   .top{padding:24px 16px 16px}
   .page{padding:40px 16px 72px}
   .intro{grid-template-columns:1fr;gap:28px}
