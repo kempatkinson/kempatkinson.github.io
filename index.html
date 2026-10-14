@@ -1,12 +1,299 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kemp Atkinson — Actor &amp; Writer</title>
+<meta name="description" content="Kemp Atkinson is an actor, writer and improviser. Northwestern-trained. Writer/actor of the web series Free Lunch (Austin Film Festival, NYC Web Fest).">
+<meta property="og:title" content="Kemp Atkinson — Actor & Writer">
+<meta property="og:description" content="Actor · Writer · Improviser. Reel, projects and credits.">
+<meta property="og:image" content="images/headshot.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800;900&family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4efe6; --paper:#fbf8f2; --ink:#171513; --muted:#6b645b; --line:#d9d1c4;
+    --accent:#e2432a; --accent-ink:#fff; --gold:#b98a2b;
+    --display:'Archivo',system-ui,sans-serif; --serif:'Fraunces',Georgia,serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:var(--display);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  img{max-width:100%;display:block}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:10;background:rgba(244,239,230,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:16px}
+  .logo{font-weight:900;letter-spacing:-.02em;text-decoration:none;font-size:18px;text-transform:uppercase}
+  .logo span{color:var(--accent)}
+  nav ul{display:flex;gap:22px;list-style:none}
+  nav ul a{text-decoration:none;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+  nav ul a:hover{color:var(--ink)}
+
+  /* HERO */
+  .hero{padding:72px 0 64px;border-bottom:1px solid var(--line)}
+  .hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+  .tag{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--bg);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:7px 12px;border-radius:999px}
+  .tag i{width:8px;height:8px;border-radius:50%;background:var(--accent);display:block;animation:pulse 1.8s infinite}
+  @keyframes pulse{50%{opacity:.35}}
+  h1{font-weight:900;font-size:clamp(56px,10vw,128px);line-height:.86;letter-spacing:-.045em;text-transform:uppercase;margin:22px 0 20px}
+  h1 em{font-family:var(--serif);font-style:italic;font-weight:400;text-transform:none;letter-spacing:-.02em;color:var(--accent)}
+  .roles{font-family:var(--serif);font-style:italic;font-size:24px;color:var(--muted);margin-bottom:24px}
+  .bio{max-width:52ch;font-size:18px}
+  .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+  .btn{display:inline-block;text-decoration:none;font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:.06em;padding:14px 22px;border:2px solid var(--ink);border-radius:4px;transition:transform .15s}
+  .btn:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--ink)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+  .btn.primary:hover{box-shadow:4px 4px 0 var(--ink)}
+  .headshot{position:relative;aspect-ratio:4/5;background:var(--paper);border:2px solid var(--ink);box-shadow:12px 12px 0 var(--accent);overflow:hidden}
+  .headshot img{width:100%;height:100%;object-fit:cover}
+  .placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;color:var(--muted);font-size:14px;gap:8px;background:repeating-linear-gradient(45deg,var(--paper) 0 14px,#f1ebe0 14px 28px)}
+  .placeholder b{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}
+
+  /* SECTIONS */
+  section{padding:88px 0;border-bottom:1px solid var(--line)}
+  .kicker{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+  h2{font-weight:900;font-size:clamp(38px,6vw,64px);line-height:.95;letter-spacing:-.035em;text-transform:uppercase;margin-bottom:40px}
+  h2 em{font-family:var(--serif);font-style:italic;font-weight:400;text-transform:none;color:var(--muted)}
+
+  /* REEL */
+  .reel{position:relative;aspect-ratio:16/9;background:var(--ink);border:2px solid var(--ink)}
+  .reel iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+
+  /* PROJECTS */
+  .projects{display:grid;gap:28px}
+  .project{display:grid;grid-template-columns:140px 1fr auto;gap:32px;align-items:start;background:var(--paper);border:2px solid var(--ink);padding:32px;position:relative}
+  .year{font-weight:900;font-size:56px;line-height:.9;letter-spacing:-.04em;color:var(--accent)}
+  .project h3{font-weight:900;font-size:clamp(28px,4vw,40px);line-height:1;letter-spacing:-.025em;text-transform:uppercase;margin-bottom:8px}
+  .meta{font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+  .project p{max-width:58ch}
+  .still{grid-column:1/-1;width:100%;aspect-ratio:16/9;object-fit:cover;border:2px solid var(--ink);margin-bottom:4px}
+  .soon{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;background:var(--ink);color:var(--bg);padding:4px 9px;border-radius:3px;vertical-align:middle;margin-left:8px}
+  .laurels{display:flex;flex-direction:column;gap:12px;min-width:170px}
+  .laurel{display:flex;align-items:center;gap:6px;color:var(--gold);text-align:center}
+  .laurel svg{width:26px;height:56px;flex:none}
+  .laurel svg.r{transform:scaleX(-1)}
+  .laurel div{flex:1;line-height:1.15}
+  .laurel small{display:block;font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+  .laurel strong{display:block;font-family:var(--serif);font-size:15px;font-weight:600;color:var(--ink)}
+  .laurel-row{display:none;gap:18px;flex-wrap:wrap;margin-top:18px}
+
+  /* CREDITS */
+  table{width:100%;border-collapse:collapse}
+  th{text-align:left;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding:0 12px 12px 0;border-bottom:2px solid var(--ink)}
+  td{padding:16px 12px 16px 0;border-bottom:1px solid var(--line);vertical-align:top}
+  td:first-child{font-weight:700}
+  td:last-child{color:var(--muted)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+  .train li{list-style:none;padding:16px 0;border-bottom:1px solid var(--line)}
+  .train li b{display:block}
+  .train li span{color:var(--muted);font-size:15px}
+  .skills{display:flex;flex-wrap:wrap;gap:10px}
+  .skills li{list-style:none;border:2px solid var(--ink);border-radius:999px;padding:8px 16px;font-weight:600;font-size:15px}
+  h4{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+
+  /* CONTACT */
+  .contact{background:var(--ink);color:var(--bg);border:0}
+  .contact h2 em{color:#a79f94}
+  .contact .kicker{color:var(--accent)}
+  .contact p{max-width:56ch;font-size:19px;color:#d8d1c6}
+  .contact .btn{border-color:var(--bg);color:var(--bg)}
+  .contact .btn.primary{border-color:var(--accent);color:#fff}
+  .contact .btn:hover{box-shadow:4px 4px 0 var(--accent)}
+  footer{background:var(--ink);color:#8a8378;font-size:13px;padding:28px 0;border-top:1px solid #2c2925}
+
+  @media (max-width:860px){
+    nav ul{display:none}
+    .hero{padding:40px 0 56px}
+    .hero .wrap{grid-template-columns:1fr;gap:40px}
+    .headshot{max-width:420px;box-shadow:8px 8px 0 var(--accent)}
+    section{padding:64px 0}
+    .project{grid-template-columns:1fr;gap:12px;padding:24px}
+    .year{font-size:40px}
+    .laurels{display:none}
+    .laurel-row{display:flex}
+    .two{grid-template-columns:1fr;gap:48px}
+    td,th{font-size:15px}
+  }
+  @media (max-width:520px){
+    .wrap{padding:0 16px}
+    table thead{display:none}
+    table tr{display:block;padding:14px 0;border-bottom:1px solid var(--line)}
+    table td{display:block;border:0;padding:0}
+  }
+</style>
 </head>
 <body>
-    <h1> Hi my name is Kemp. </H1>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top">Kemp <span>Atkinson</span></a>
+    <ul>
+      <li><a href="#reel">Reel</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#credits">Credits</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="tag"><i></i>Seeking representation</span>
+      <h1>Kemp<br>Atkinson<em>.</em></h1>
+      <p class="roles">Actor · Writer · Improviser</p>
+      <!-- EDIT: swap in your own bio -->
+      <p class="bio">Northwestern-trained actor and writer working across film, web series, long-form improv and stand-up. Creator and star of the festival-selected web series <strong>Free Lunch</strong>.</p>
+      <div class="cta">
+        <a class="btn primary" href="#reel">Watch the reel</a>
+        <a class="btn" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <div class="headshot">
+      <!-- Put your headshot in the images folder named headshot.jpg -->
+      <img src="images/headshot.jpg" alt="Headshot of Kemp Atkinson" onerror="this.remove()">
+      <div class="placeholder" aria-hidden="true"><b>Headshot goes here</b>Upload images/headshot.jpg</div>
+    </div>
+  </div>
+</header>
+
+<section id="reel">
+  <div class="wrap">
+    <p class="kicker">On camera</p>
+    <h2>The Reel</h2>
+    <div class="reel">
+      <iframe src="https://drive.google.com/file/d/1MoOTO6nAYdhf17UZbd2Ye-Gp64t2e8z8/preview" allow="autoplay; fullscreen" allowfullscreen title="Kemp Atkinson acting reel"></iframe>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <p class="kicker">Written &amp; performed</p>
+    <h2>Projects <em>I made</em></h2>
+    <div class="projects">
+
+      <article class="project">
+        <div class="year">2026</div>
+        <div>
+          <h3>Being a Hero <span class="soon">Coming soon</span></h3>
+          <p class="meta">Format TBA · Role TBA</p>
+          <!-- EDIT: Being a Hero details -->
+          <p>Details coming soon.</p>
+        </div>
+        <div></div>
+      </article>
+
+      <article class="project">
+        <img class="still" src="images/free-lunch.jpg" alt="Still from Free Lunch: Kemp in a Hawaiian shirt cracking up two friends at a candlelit bar table" loading="lazy">
+        <div class="year">2025</div>
+        <div>
+          <h3>Free Lunch</h3>
+          <p class="meta">Web Series · Writer / Actor</p>
+          <!-- EDIT: add a logline and a watch link -->
+          <p>A web series written by and starring Kemp. Official selection at the Austin Film Festival and NYC Web Fest.</p>
+          <div class="laurel-row">
+            <div class="laurel"><svg viewBox="0 0 26 56"><use href="#leaf"/></svg><div><small>Official Selection</small><strong>Austin Film Festival</strong></div><svg class="r" viewBox="0 0 26 56"><use href="#leaf"/></svg></div>
+            <div class="laurel"><svg viewBox="0 0 26 56"><use href="#leaf"/></svg><div><small>Official Selection</small><strong>NYC Web Fest</strong></div><svg class="r" viewBox="0 0 26 56"><use href="#leaf"/></svg></div>
+          </div>
+        </div>
+        <div class="laurels">
+          <div class="laurel"><svg viewBox="0 0 26 56"><use href="#leaf"/></svg><div><small>Official Selection</small><strong>Austin Film Festival</strong></div><svg class="r" viewBox="0 0 26 56"><use href="#leaf"/></svg></div>
+          <div class="laurel"><svg viewBox="0 0 26 56"><use href="#leaf"/></svg><div><small>Official Selection</small><strong>NYC Web Fest</strong></div><svg class="r" viewBox="0 0 26 56"><use href="#leaf"/></svg></div>
+        </div>
+      </article>
+
+      <article class="project">
+        <img class="still" src="images/wait-for-gru.jpg" alt="Wait for Gru title card: Kemp in a yellow hoodie and ski goggles on a rooftop at dusk" loading="lazy">
+        <div class="year">2022</div>
+        <div>
+          <h3>Wait for Gru</h3>
+          <p class="meta">Short Film · Writer / Director / Actor</p>
+          <!-- EDIT: add a logline and a watch link -->
+          <p>A short film written, directed and performed by Kemp.</p>
+        </div>
+        <div></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="credits">
+  <div class="wrap">
+    <p class="kicker">Résumé</p>
+    <h2>Credits</h2>
+    <table>
+      <thead><tr><th>Project</th><th>Company</th><th>Role</th></tr></thead>
+      <tbody>
+        <tr><td>Free Lunch</td><td>Web Series</td><td>Writer / Actor</td></tr>
+        <tr><td>Wait for Gru</td><td>Short Film</td><td>Writer / Director / Actor</td></tr>
+        <tr><td>Grandmother’s Mistress</td><td>The Titanic Players</td><td>Long-form Improviser</td></tr>
+        <tr><td>Stand Up Showcase</td><td>Sit and Spin Board</td><td>Stand-up Performer</td></tr>
+        <tr><td>Scooter</td><td>The Blackout</td><td>Actor</td></tr>
+        <tr><td>The Lazy Anwar Show — Ep. 1</td><td>DIAL UP</td><td>Actor</td></tr>
+        <tr><td>My Roommate’s a Vampire</td><td>The Blackout</td><td>Actor / Improviser</td></tr>
+        <tr><td>Winter Quarter Update 2018</td><td>The Blackout</td><td>Writer</td></tr>
+        <tr><td>Tighter Ryder</td><td>The Blackout</td><td>Actor / Writer</td></tr>
+      </tbody>
+    </table>
+
+    <div class="two" style="margin-top:72px">
+      <div>
+        <h4>Training</h4>
+        <ul class="train">
+          <li><b>Northwestern University</b><span>B.S. in Theatre</span></li>
+          <li><b>Northwestern Acting Program</b><span>Sandra Marquez, Mary M. Poole, Dawn Mora</span></li>
+          <li><b>American Conservatory Theater — Young Conservatory</b><span>Craig Slaight, Dominque Lozano</span></li>
+          <li><b>iO Theater</b><span>Levels 1–5 · Liz Allen</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Special Skills</h4>
+        <ul class="skills">
+          <li>Russian accent</li><li>British accent</li><li>Southern accent</li>
+          <li>Impressions</li><li>Long-form improv</li><li>Short-form improv</li><li>Stand-up comedy</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <p class="kicker">Seeking representation</p>
+    <h2>Let’s work <em>together</em></h2>
+    <p>Currently seeking agency and management representation. For casting, representation or collaboration, reach out directly.</p>
+    <div class="cta">
+      <!-- EDIT: replace with your real email -->
+      <a class="btn primary" href="mailto:you@example.com">you@example.com</a>
+      <a class="btn" href="#reel">Watch the reel</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© <span id="yr">2026</span> Kemp Atkinson</div>
+</footer>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="leaf" viewBox="0 0 26 56">
+    <path d="M20 54C8 46 4 30 10 6" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <g fill="currentColor">
+      <ellipse cx="8" cy="12" rx="2.6" ry="5.5" transform="rotate(-25 8 12)"/>
+      <ellipse cx="6.5" cy="22" rx="2.6" ry="5.5" transform="rotate(-35 6.5 22)"/>
+      <ellipse cx="7.5" cy="32" rx="2.6" ry="5.5" transform="rotate(-45 7.5 32)"/>
+      <ellipse cx="11" cy="41" rx="2.6" ry="5.5" transform="rotate(-55 11 41)"/>
+      <ellipse cx="14" cy="18" rx="2.2" ry="4.5" transform="rotate(25 14 18)"/>
+      <ellipse cx="14" cy="29" rx="2.2" ry="4.5" transform="rotate(20 14 29)"/>
+      <ellipse cx="17" cy="40" rx="2.2" ry="4.5" transform="rotate(10 17 40)"/>
+    </g>
+  </symbol>
+</svg>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
 </body>
 </html>
