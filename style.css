@@ -32,7 +32,7 @@ hr{border:0;border-top:1px solid #111;margin:56px 0}
 
 /* about */
 .intro{display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:start}
-.headshot{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:46% 25%}
+.headshot{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:38% 50%}
 .intro h1{margin-bottom:16px}
 .intro p{max-width:60ch;margin-bottom:14px}
 .intro ul{margin-top:20px}
